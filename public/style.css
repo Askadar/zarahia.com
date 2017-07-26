@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto');
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	background: rgb(76, 180, 228);
+}
+h1, h2, h3 {
+	font-family: 'Quicksand', sans-serif;
+}
+body > .container {
+	display: grid;
+	grid-template-columns: 0.6fr 3fr 1.4fr;
+	grid-template-areas:
+		"meta article assets";
+	margin: 16px auto;
+	max-width: 960px;
+	box-shadow: rgba(128, 128, 128, 0.5) 0px 0px 4px 1px;
+	background: white;
+	border-radius: 2px;
+}
+.container > .meta {
+	grid-area: meta;
+	box-shadow: rgba(128, 128, 128, 0.5) 1px 0px 1px -1px;
+}
+.container > article {
+	grid-area: article;
+	padding: 2em;
+	overflow: auto;
+}
+.container > .assets {
+	grid-area: assets;
+	box-shadow: rgba(128, 128, 128, 0.5) -1px 0px 1px -1px;
+}
+.container > .assets,.container > .meta  {
+	padding: 1em;
+	background: rgba(128,128,128,0.02);
+}
